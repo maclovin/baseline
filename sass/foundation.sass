@@ -1,0 +1,979 @@
+meta
+  &.foundation-mq-small
+    font-family: "only screen and (min-width: 768px)"
+    width: 768px
+  &.foundation-mq-medium
+    font-family: "only screen and (min-width:1280px)"
+    width: 1280px
+  &.foundation-mq-large
+    font-family: "only screen and (min-width:1440px)"
+    width: 1440px
+
+*
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -moz-box-sizing: border-box
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+img, object, embed
+  max-width: 100%
+  height: auto
+
+object, embed
+  height: 100%
+
+img
+  -ms-interpolation-mode: bicubic
+
+#map_canvas
+  img, embed, object
+    max-width: none !important
+
+.map_canvas
+  img, embed, object
+    max-width: none !important
+
+.left
+  float: left !important
+
+.right
+  float: right !important
+
+.text-left
+  text-align: left !important
+
+.text-right
+  text-align: right !important
+
+.text-center
+  text-align: center !important
+
+.text-justify
+  text-align: justify !important
+
+.hide
+  display: none
+
+.antialiased
+  -webkit-font-smoothing: antialiased
+
+img
+  display: inline-block
+  vertical-align: middle
+
+textarea
+  height: auto
+  min-height: 50px
+
+select
+  width: 100%
+
+/* Grid HTML Classes
+
+.row
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  max-width: 108em
+  *zoom: 1
+  &:before
+    content: " "
+    display: table
+  &:after
+    content: " "
+    display: table
+    clear: both
+  &.collapse
+    >
+      .column, .columns
+        position: relative
+        padding-left: 0
+        padding-right: 0
+        float: left
+    .row
+      margin-left: 0
+      margin-right: 0
+  .row
+    width: auto
+    margin-left: -1em
+    margin-right: -1em
+    margin-top: 0
+    margin-bottom: 0
+    max-width: none
+    *zoom: 1
+    &:before
+      content: " "
+      display: table
+    &:after
+      content: " "
+      display: table
+      clear: both
+    &.collapse
+      width: auto
+      margin: 0
+      max-width: none
+      *zoom: 1
+      &:before
+        content: " "
+        display: table
+      &:after
+        content: " "
+        display: table
+        clear: both
+
+.column, .columns
+  position: relative
+  padding-left: 1em
+  padding-right: 1em
+  width: 100%
+  float: left
+
+@media only screen
+  .column, .columns
+    position: relative
+    padding-left: 1em
+    padding-right: 1em
+    float: left
+  .small-1
+    position: relative
+    width: 10%
+  .small-2
+    position: relative
+    width: 20%
+  .small-3
+    position: relative
+    width: 30%
+  .small-4
+    position: relative
+    width: 40%
+  .small-5
+    position: relative
+    width: 50%
+  .small-6
+    position: relative
+    width: 60%
+  .small-7
+    position: relative
+    width: 70%
+  .small-8
+    position: relative
+    width: 80%
+  .small-9
+    position: relative
+    width: 90%
+  .small-10
+    position: relative
+    width: 100%
+  .small-offset-0
+    position: relative
+    margin-left: 0%
+  .small-offset-1
+    position: relative
+    margin-left: 10%
+  .small-offset-2
+    position: relative
+    margin-left: 20%
+  .small-offset-3
+    position: relative
+    margin-left: 30%
+  .small-offset-4
+    position: relative
+    margin-left: 40%
+  .small-offset-5
+    position: relative
+    margin-left: 50%
+  .small-offset-6
+    position: relative
+    margin-left: 60%
+  .small-offset-7
+    position: relative
+    margin-left: 70%
+  .small-offset-8
+    position: relative
+    margin-left: 80%
+  [class*="column"] + [class*="column"]
+    &.end
+      float: left
+  .column.small-centered, .columns.small-centered
+    position: relative
+    margin-left: auto
+    margin-right: auto
+    float: none !important
+
+/* Styles for screens that are atleast 768px;
+@media only screen and (min-width: 768px)
+  .large-1
+    position: relative
+    width: 10%
+  .large-2
+    position: relative
+    width: 20%
+  .large-3
+    position: relative
+    width: 30%
+  .large-4
+    position: relative
+    width: 40%
+  .large-5
+    position: relative
+    width: 50%
+  .large-6
+    position: relative
+    width: 60%
+  .large-7
+    position: relative
+    width: 70%
+  .large-8
+    position: relative
+    width: 80%
+  .large-9
+    position: relative
+    width: 90%
+  .large-10
+    position: relative
+    width: 100%
+  .row
+    .large-offset-0
+      position: relative
+      margin-left: 0%
+    .large-offset-1
+      position: relative
+      margin-left: 10%
+    .large-offset-2
+      position: relative
+      margin-left: 20%
+    .large-offset-3
+      position: relative
+      margin-left: 30%
+    .large-offset-4
+      position: relative
+      margin-left: 40%
+    .large-offset-5
+      position: relative
+      margin-left: 50%
+    .large-offset-6
+      position: relative
+      margin-left: 60%
+    .large-offset-7
+      position: relative
+      margin-left: 70%
+    .large-offset-8
+      position: relative
+      margin-left: 80%
+    .large-offset-9
+      position: relative
+      margin-left: 90%
+  .push-1
+    position: relative
+    left: 10%
+    right: auto
+  .pull-1
+    position: relative
+    right: 10%
+    left: auto
+  .push-2
+    position: relative
+    left: 20%
+    right: auto
+  .pull-2
+    position: relative
+    right: 20%
+    left: auto
+  .push-3
+    position: relative
+    left: 30%
+    right: auto
+  .pull-3
+    position: relative
+    right: 30%
+    left: auto
+  .push-4
+    position: relative
+    left: 40%
+    right: auto
+  .pull-4
+    position: relative
+    right: 40%
+    left: auto
+  .push-5
+    position: relative
+    left: 50%
+    right: auto
+  .pull-5
+    position: relative
+    right: 50%
+    left: auto
+  .push-6
+    position: relative
+    left: 60%
+    right: auto
+  .pull-6
+    position: relative
+    right: 60%
+    left: auto
+  .push-7
+    position: relative
+    left: 70%
+    right: auto
+  .pull-7
+    position: relative
+    right: 70%
+    left: auto
+  .push-8
+    position: relative
+    left: 80%
+    right: auto
+  .pull-8
+    position: relative
+    right: 80%
+    left: auto
+  .push-9
+    position: relative
+    left: 90%
+    right: auto
+  .pull-9
+    position: relative
+    right: 90%
+    left: auto
+  .column.large-centered, .columns.large-centered
+    position: relative
+    margin-left: auto
+    margin-right: auto
+    float: none !important
+  .column.large-uncentered, .columns.large-uncentered
+    margin-left: 0
+    margin-right: 0
+    float: left !important
+  .column.large-uncentered.opposite, .columns.large-uncentered.opposite
+    float: right !important
+
+/* Foundation Block Grids for below small breakpoint
+@media only screen
+  [class*="block-grid-"]
+    display: block
+    padding: 0
+    margin: 0 -0.625em
+    *zoom: 1
+    &:before
+      content: " "
+      display: table
+    &:after
+      content: " "
+      display: table
+      clear: both
+    > li
+      display: inline
+      height: auto
+      float: left
+      padding: 0 0.625em 1.25em
+  .small-block-grid-1 > li
+    width: 100%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(1n+1)
+      clear: both
+  .small-block-grid-2 > li
+    width: 50%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(2n+1)
+      clear: both
+  .small-block-grid-3 > li
+    width: 33.33333%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(3n+1)
+      clear: both
+  .small-block-grid-4 > li
+    width: 25%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(4n+1)
+      clear: both
+  .small-block-grid-5 > li
+    width: 20%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(5n+1)
+      clear: both
+  .small-block-grid-6 > li
+    width: 16.66667%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(6n+1)
+      clear: both
+  .small-block-grid-7 > li
+    width: 14.28571%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(7n+1)
+      clear: both
+  .small-block-grid-8 > li
+    width: 12.5%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(8n+1)
+      clear: both
+  .small-block-grid-9 > li
+    width: 11.11111%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(9n+1)
+      clear: both
+  .small-block-grid-10 > li
+    width: 10%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(10n+1)
+      clear: both
+  .small-block-grid-11 > li
+    width: 9.09091%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(11n+1)
+      clear: both
+  .small-block-grid-12 > li
+    width: 8.33333%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(12n+1)
+      clear: both
+
+/* Foundation Block Grids for above small breakpoint
+@media only screen and (min-width: 768px)
+  /* Remove small grid clearing
+  .small-block-grid-1 > li:nth-of-type(1n+1), .small-block-grid-2 > li:nth-of-type(2n+1), .small-block-grid-3 > li:nth-of-type(3n+1), .small-block-grid-4 > li:nth-of-type(4n+1), .small-block-grid-5 > li:nth-of-type(5n+1), .small-block-grid-6 > li:nth-of-type(6n+1), .small-block-grid-7 > li:nth-of-type(7n+1), .small-block-grid-8 > li:nth-of-type(8n+1), .small-block-grid-9 > li:nth-of-type(9n+1), .small-block-grid-10 > li:nth-of-type(10n+1), .small-block-grid-11 > li:nth-of-type(11n+1), .small-block-grid-12 > li:nth-of-type(12n+1)
+    clear: none
+  .large-block-grid-1 > li
+    width: 100%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(1n+1)
+      clear: both
+  .large-block-grid-2 > li
+    width: 50%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(2n+1)
+      clear: both
+  .large-block-grid-3 > li
+    width: 33.33333%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(3n+1)
+      clear: both
+  .large-block-grid-4 > li
+    width: 25%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(4n+1)
+      clear: both
+  .large-block-grid-5 > li
+    width: 20%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(5n+1)
+      clear: both
+  .large-block-grid-6 > li
+    width: 16.66667%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(6n+1)
+      clear: both
+  .large-block-grid-7 > li
+    width: 14.28571%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(7n+1)
+      clear: both
+  .large-block-grid-8 > li
+    width: 12.5%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(8n+1)
+      clear: both
+  .large-block-grid-9 > li
+    width: 11.11111%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(9n+1)
+      clear: both
+  .large-block-grid-10 > li
+    width: 10%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(10n+1)
+      clear: both
+  .large-block-grid-11 > li
+    width: 9.09091%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(11n+1)
+      clear: both
+  .large-block-grid-12 > li
+    width: 8.33333%
+    padding: 0 0.625em 1.25em
+    &:nth-of-type(n)
+      clear: none
+    &:nth-of-type(12n+1)
+      clear: both
+
+meta
+  &.foundation-version
+    font-family: "/5.5.1/"
+  &.foundation-mq-small
+    font-family: "/only screen/"
+    width: 0
+  &.foundation-mq-small-only
+    font-family: "/only screen and (max-width: 40em)/"
+    width: 0
+  &.foundation-mq-medium
+    font-family: "/only screen and (min-width:40.063em)/"
+    width: 40.063em
+  &.foundation-mq-medium-only
+    font-family: "/only screen and (min-width:40.063em) and (max-width:64em)/"
+    width: 40.063em
+  &.foundation-mq-large
+    font-family: "/only screen and (min-width:64.063em)/"
+    width: 64.063em
+  &.foundation-mq-large-only
+    font-family: "/only screen and (min-width:64.063em) and (max-width:90em)/"
+    width: 64.063em
+  &.foundation-mq-xlarge
+    font-family: "/only screen and (min-width:90.063em)/"
+    width: 90.063em
+  &.foundation-mq-xlarge-only
+    font-family: "/only screen and (min-width:90.063em) and (max-width:120em)/"
+    width: 90.063em
+  &.foundation-mq-xxlarge
+    font-family: "/only screen and (min-width:120.063em)/"
+    width: 120.063em
+  &.foundation-data-attribute-namespace
+    font-family: false
+
+#map_canvas
+  img, embed, object
+    max-width: none !important
+
+.map_canvas
+  img, embed, object
+    max-width: none !important
+
+.left
+  float: left !important
+
+.right
+  float: right !important
+
+.clearfix
+  &:before
+    content: " "
+    display: table
+  &:after
+    content: " "
+    display: table
+    clear: both
+
+.hide
+  display: none
+
+.invisible
+  visibility: hidden
+
+.antialiased
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+/* small displays
+@media only screen
+  .show-for-small-only, .show-for-small-up, .show-for-small, .show-for-small-down, .hide-for-medium-only, .hide-for-medium-up, .hide-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down
+    display: inherit !important
+  .hide-for-small-only, .hide-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down
+    display: none !important
+  .visible-for-small-only, .visible-for-small-up, .visible-for-small, .visible-for-small-down, .hidden-for-medium-only, .hidden-for-medium-up, .hidden-for-medium, .visible-for-medium-down, .hidden-for-large-only, .hidden-for-large-up, .hidden-for-large, .visible-for-large-down, .hidden-for-xlarge-only, .hidden-for-xlarge-up, .hidden-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .visible-for-xxlarge-down
+    position: static !important
+    height: auto
+    width: auto
+    overflow: visible
+    clip: auto
+  .hidden-for-small-only, .hidden-for-small-up, .hidden-for-small, .hidden-for-small-down, .visible-for-medium-only, .visible-for-medium-up, .visible-for-medium, .hidden-for-medium-down, .visible-for-large-only, .visible-for-large-up, .visible-for-large, .hidden-for-large-down, .visible-for-xlarge-only, .visible-for-xlarge-up, .visible-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .hidden-for-xxlarge-down
+    position: absolute !important
+    height: 1px
+    width: 1px
+    overflow: hidden
+    clip: rect(1px, 1px, 1px, 1px)
+  table
+    &.show-for-small-only, &.show-for-small-up, &.show-for-small, &.show-for-small-down, &.hide-for-medium-only, &.hide-for-medium-up, &.hide-for-medium, &.show-for-medium-down, &.hide-for-large-only, &.hide-for-large-up, &.hide-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table !important
+  thead
+    &.show-for-small-only, &.show-for-small-up, &.show-for-small, &.show-for-small-down, &.hide-for-medium-only, &.hide-for-medium-up, &.hide-for-medium, &.show-for-medium-down, &.hide-for-large-only, &.hide-for-large-up, &.hide-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-header-group !important
+  tbody
+    &.show-for-small-only, &.show-for-small-up, &.show-for-small, &.show-for-small-down, &.hide-for-medium-only, &.hide-for-medium-up, &.hide-for-medium, &.show-for-medium-down, &.hide-for-large-only, &.hide-for-large-up, &.hide-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row-group !important
+  tr
+    &.show-for-small-only, &.show-for-small-up, &.show-for-small, &.show-for-small-down, &.hide-for-medium-only, &.hide-for-medium-up, &.hide-for-medium, &.show-for-medium-down, &.hide-for-large-only, &.hide-for-large-up, &.hide-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row
+  th.show-for-small-only, td.show-for-small-only, th.show-for-small-up, td.show-for-small-up, th.show-for-small, td.show-for-small, th.show-for-small-down, td.show-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.hide-for-medium-up, td.hide-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.show-for-medium-down, td.show-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.hide-for-large-up, td.hide-for-large-up, th.hide-for-large, td.hide-for-large, th.show-for-large-down, td.show-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.hide-for-xlarge-up, td.hide-for-xlarge-up, th.hide-for-xlarge, td.hide-for-xlarge, th.show-for-xlarge-down, td.show-for-xlarge-down, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up, th.hide-for-xxlarge, td.hide-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down
+    display: table-cell !important
+
+/* medium displays
+@media only screen and (min-width: 40.063em)
+  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .show-for-medium-only, .show-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down
+    display: inherit !important
+  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .hide-for-medium-only, .hide-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down
+    display: none !important
+  .hidden-for-small-only, .visible-for-small-up, .hidden-for-small, .hidden-for-small-down, .visible-for-medium-only, .visible-for-medium-up, .visible-for-medium, .visible-for-medium-down, .hidden-for-large-only, .hidden-for-large-up, .hidden-for-large, .visible-for-large-down, .hidden-for-xlarge-only, .hidden-for-xlarge-up, .hidden-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .visible-for-xxlarge-down
+    position: static !important
+    height: auto
+    width: auto
+    overflow: visible
+    clip: auto
+  .visible-for-small-only, .hidden-for-small-up, .visible-for-small, .visible-for-small-down, .hidden-for-medium-only, .hidden-for-medium-up, .hidden-for-medium, .hidden-for-medium-down, .visible-for-large-only, .visible-for-large-up, .visible-for-large, .hidden-for-large-down, .visible-for-xlarge-only, .visible-for-xlarge-up, .visible-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .hidden-for-xxlarge-down
+    position: absolute !important
+    height: 1px
+    width: 1px
+    overflow: hidden
+    clip: rect(1px, 1px, 1px, 1px)
+  table
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.show-for-medium-only, &.show-for-medium-up, &.show-for-medium, &.show-for-medium-down, &.hide-for-large-only, &.hide-for-large-up, &.hide-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table !important
+  thead
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.show-for-medium-only, &.show-for-medium-up, &.show-for-medium, &.show-for-medium-down, &.hide-for-large-only, &.hide-for-large-up, &.hide-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-header-group !important
+  tbody
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.show-for-medium-only, &.show-for-medium-up, &.show-for-medium, &.show-for-medium-down, &.hide-for-large-only, &.hide-for-large-up, &.hide-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row-group !important
+  tr
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.show-for-medium-only, &.show-for-medium-up, &.show-for-medium, &.show-for-medium-down, &.hide-for-large-only, &.hide-for-large-up, &.hide-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row
+  th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.show-for-medium-only, td.show-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.show-for-medium, td.show-for-medium, th.show-for-medium-down, td.show-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.hide-for-large-up, td.hide-for-large-up, th.hide-for-large, td.hide-for-large, th.show-for-large-down, td.show-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.hide-for-xlarge-up, td.hide-for-xlarge-up, th.hide-for-xlarge, td.hide-for-xlarge, th.show-for-xlarge-down, td.show-for-xlarge-down, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up, th.hide-for-xxlarge, td.hide-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down
+    display: table-cell !important
+
+/* large displays
+@media only screen and (min-width: 64.063em)
+  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down
+    display: inherit !important
+  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .show-for-medium-only, .hide-for-medium-up, .show-for-medium, .show-for-medium-down, .hide-for-large-only, .hide-for-large-up, .hide-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down
+    display: none !important
+  .hidden-for-small-only, .visible-for-small-up, .hidden-for-small, .hidden-for-small-down, .hidden-for-medium-only, .visible-for-medium-up, .hidden-for-medium, .hidden-for-medium-down, .visible-for-large-only, .visible-for-large-up, .visible-for-large, .visible-for-large-down, .hidden-for-xlarge-only, .hidden-for-xlarge-up, .hidden-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .visible-for-xxlarge-down
+    position: static !important
+    height: auto
+    width: auto
+    overflow: visible
+    clip: auto
+  .visible-for-small-only, .hidden-for-small-up, .visible-for-small, .visible-for-small-down, .visible-for-medium-only, .hidden-for-medium-up, .visible-for-medium, .visible-for-medium-down, .hidden-for-large-only, .hidden-for-large-up, .hidden-for-large, .hidden-for-large-down, .visible-for-xlarge-only, .visible-for-xlarge-up, .visible-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .hidden-for-xxlarge-down
+    position: absolute !important
+    height: 1px
+    width: 1px
+    overflow: hidden
+    clip: rect(1px, 1px, 1px, 1px)
+  table
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.show-for-large-only, &.show-for-large-up, &.show-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table !important
+  thead
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.show-for-large-only, &.show-for-large-up, &.show-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-header-group !important
+  tbody
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.show-for-large-only, &.show-for-large-up, &.show-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row-group !important
+  tr
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.show-for-large-only, &.show-for-large-up, &.show-for-large, &.show-for-large-down, &.hide-for-xlarge-only, &.hide-for-xlarge-up, &.hide-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row
+  th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.hide-for-medium-down, td.hide-for-medium-down, th.show-for-large-only, td.show-for-large-only, th.show-for-large-up, td.show-for-large-up, th.show-for-large, td.show-for-large, th.show-for-large-down, td.show-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.hide-for-xlarge-up, td.hide-for-xlarge-up, th.hide-for-xlarge, td.hide-for-xlarge, th.show-for-xlarge-down, td.show-for-xlarge-down, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up, th.hide-for-xxlarge, td.hide-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down
+    display: table-cell !important
+
+/* xlarge displays
+@media only screen and (min-width: 90.063em)
+  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .hide-for-large-only, .show-for-large-up, .hide-for-large, .hide-for-large-down, .show-for-xlarge-only, .show-for-xlarge-up, .show-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down
+    display: inherit !important
+  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .show-for-medium-only, .hide-for-medium-up, .show-for-medium, .show-for-medium-down, .show-for-large-only, .hide-for-large-up, .show-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .hide-for-xxlarge-down
+    display: none !important
+  .hidden-for-small-only, .visible-for-small-up, .hidden-for-small, .hidden-for-small-down, .hidden-for-medium-only, .visible-for-medium-up, .hidden-for-medium, .hidden-for-medium-down, .hidden-for-large-only, .visible-for-large-up, .hidden-for-large, .hidden-for-large-down, .visible-for-xlarge-only, .visible-for-xlarge-up, .visible-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .visible-for-xxlarge-down
+    position: static !important
+    height: auto
+    width: auto
+    overflow: visible
+    clip: auto
+  .visible-for-small-only, .hidden-for-small-up, .visible-for-small, .visible-for-small-down, .visible-for-medium-only, .hidden-for-medium-up, .visible-for-medium, .visible-for-medium-down, .visible-for-large-only, .hidden-for-large-up, .visible-for-large, .visible-for-large-down, .hidden-for-xlarge-only, .hidden-for-xlarge-up, .hidden-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .hidden-for-xxlarge-down
+    position: absolute !important
+    height: 1px
+    width: 1px
+    overflow: hidden
+    clip: rect(1px, 1px, 1px, 1px)
+  table
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.hide-for-large-only, &.show-for-large-up, &.hide-for-large, &.hide-for-large-down, &.show-for-xlarge-only, &.show-for-xlarge-up, &.show-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table !important
+  thead
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.hide-for-large-only, &.show-for-large-up, &.hide-for-large, &.hide-for-large-down, &.show-for-xlarge-only, &.show-for-xlarge-up, &.show-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-header-group !important
+  tbody
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.hide-for-large-only, &.show-for-large-up, &.hide-for-large, &.hide-for-large-down, &.show-for-xlarge-only, &.show-for-xlarge-up, &.show-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row-group !important
+  tr
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.hide-for-large-only, &.show-for-large-up, &.hide-for-large, &.hide-for-large-down, &.show-for-xlarge-only, &.show-for-xlarge-up, &.show-for-xlarge, &.show-for-xlarge-down, &.hide-for-xxlarge-only, &.hide-for-xxlarge-up, &.hide-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row
+  th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.hide-for-medium-down, td.hide-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.show-for-large-up, td.show-for-large-up, th.hide-for-large, td.hide-for-large, th.hide-for-large-down, td.hide-for-large-down, th.show-for-xlarge-only, td.show-for-xlarge-only, th.show-for-xlarge-up, td.show-for-xlarge-up, th.show-for-xlarge, td.show-for-xlarge, th.show-for-xlarge-down, td.show-for-xlarge-down, th.hide-for-xxlarge-only, td.hide-for-xxlarge-only, th.hide-for-xxlarge-up, td.hide-for-xxlarge-up, th.hide-for-xxlarge, td.hide-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down
+    display: table-cell !important
+
+/* xxlarge displays
+@media only screen and (min-width: 120.063em)
+  .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .hide-for-large-only, .show-for-large-up, .hide-for-large, .hide-for-large-down, .hide-for-xlarge-only, .show-for-xlarge-up, .hide-for-xlarge, .hide-for-xlarge-down, .show-for-xxlarge-only, .show-for-xxlarge-up, .show-for-xxlarge, .show-for-xxlarge-down
+    display: inherit !important
+  .show-for-small-only, .hide-for-small-up, .show-for-small, .show-for-small-down, .show-for-medium-only, .hide-for-medium-up, .show-for-medium, .show-for-medium-down, .show-for-large-only, .hide-for-large-up, .show-for-large, .show-for-large-down, .show-for-xlarge-only, .hide-for-xlarge-up, .show-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .hide-for-xxlarge-down
+    display: none !important
+  .hidden-for-small-only, .visible-for-small-up, .hidden-for-small, .hidden-for-small-down, .hidden-for-medium-only, .visible-for-medium-up, .hidden-for-medium, .hidden-for-medium-down, .hidden-for-large-only, .visible-for-large-up, .hidden-for-large, .hidden-for-large-down, .hidden-for-xlarge-only, .visible-for-xlarge-up, .hidden-for-xlarge, .hidden-for-xlarge-down, .visible-for-xxlarge-only, .visible-for-xxlarge-up, .visible-for-xxlarge, .visible-for-xxlarge-down
+    position: static !important
+    height: auto
+    width: auto
+    overflow: visible
+    clip: auto
+  .visible-for-small-only, .hidden-for-small-up, .visible-for-small, .visible-for-small-down, .visible-for-medium-only, .hidden-for-medium-up, .visible-for-medium, .visible-for-medium-down, .visible-for-large-only, .hidden-for-large-up, .visible-for-large, .visible-for-large-down, .visible-for-xlarge-only, .hidden-for-xlarge-up, .visible-for-xlarge, .visible-for-xlarge-down, .hidden-for-xxlarge-only, .hidden-for-xxlarge-up, .hidden-for-xxlarge, .hidden-for-xxlarge-down
+    position: absolute !important
+    height: 1px
+    width: 1px
+    overflow: hidden
+    clip: rect(1px, 1px, 1px, 1px)
+  table
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.hide-for-large-only, &.show-for-large-up, &.hide-for-large, &.hide-for-large-down, &.hide-for-xlarge-only, &.show-for-xlarge-up, &.hide-for-xlarge, &.hide-for-xlarge-down, &.show-for-xxlarge-only, &.show-for-xxlarge-up, &.show-for-xxlarge, &.show-for-xxlarge-down
+      display: table !important
+  thead
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.hide-for-large-only, &.show-for-large-up, &.hide-for-large, &.hide-for-large-down, &.hide-for-xlarge-only, &.show-for-xlarge-up, &.hide-for-xlarge, &.hide-for-xlarge-down, &.show-for-xxlarge-only, &.show-for-xxlarge-up, &.show-for-xxlarge, &.show-for-xxlarge-down
+      display: table-header-group !important
+  tbody
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.hide-for-large-only, &.show-for-large-up, &.hide-for-large, &.hide-for-large-down, &.hide-for-xlarge-only, &.show-for-xlarge-up, &.hide-for-xlarge, &.hide-for-xlarge-down, &.show-for-xxlarge-only, &.show-for-xxlarge-up, &.show-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row-group !important
+  tr
+    &.hide-for-small-only, &.show-for-small-up, &.hide-for-small, &.hide-for-small-down, &.hide-for-medium-only, &.show-for-medium-up, &.hide-for-medium, &.hide-for-medium-down, &.hide-for-large-only, &.show-for-large-up, &.hide-for-large, &.hide-for-large-down, &.hide-for-xlarge-only, &.show-for-xlarge-up, &.hide-for-xlarge, &.hide-for-xlarge-down, &.show-for-xxlarge-only, &.show-for-xxlarge-up, &.show-for-xxlarge, &.show-for-xxlarge-down
+      display: table-row
+  th.hide-for-small-only, td.hide-for-small-only, th.show-for-small-up, td.show-for-small-up, th.hide-for-small, td.hide-for-small, th.hide-for-small-down, td.hide-for-small-down, th.hide-for-medium-only, td.hide-for-medium-only, th.show-for-medium-up, td.show-for-medium-up, th.hide-for-medium, td.hide-for-medium, th.hide-for-medium-down, td.hide-for-medium-down, th.hide-for-large-only, td.hide-for-large-only, th.show-for-large-up, td.show-for-large-up, th.hide-for-large, td.hide-for-large, th.hide-for-large-down, td.hide-for-large-down, th.hide-for-xlarge-only, td.hide-for-xlarge-only, th.show-for-xlarge-up, td.show-for-xlarge-up, th.hide-for-xlarge, td.hide-for-xlarge, th.hide-for-xlarge-down, td.hide-for-xlarge-down, th.show-for-xxlarge-only, td.show-for-xxlarge-only, th.show-for-xxlarge-up, td.show-for-xxlarge-up, th.show-for-xxlarge, td.show-for-xxlarge, th.show-for-xxlarge-down, td.show-for-xxlarge-down
+    display: table-cell !important
+
+/* Orientation targeting
+
+.show-for-landscape, .hide-for-portrait
+  display: inherit !important
+
+.hide-for-landscape, .show-for-portrait
+  display: none !important
+
+/* Specific visibility for tables
+
+table
+  &.hide-for-landscape, &.show-for-portrait
+    display: table !important
+
+thead
+  &.hide-for-landscape, &.show-for-portrait
+    display: table-header-group !important
+
+tbody
+  &.hide-for-landscape, &.show-for-portrait
+    display: table-row-group !important
+
+tr
+  &.hide-for-landscape, &.show-for-portrait
+    display: table-row !important
+
+td
+  &.hide-for-landscape, &.show-for-portrait
+    display: table-cell !important
+
+th
+  &.hide-for-landscape, &.show-for-portrait
+    display: table-cell !important
+
+@media only screen and (orientation: landscape)
+  .show-for-landscape, .hide-for-portrait
+    display: inherit !important
+  .hide-for-landscape, .show-for-portrait
+    display: none !important
+  /* Specific visibility for tables
+  table
+    &.show-for-landscape, &.hide-for-portrait
+      display: table !important
+  thead
+    &.show-for-landscape, &.hide-for-portrait
+      display: table-header-group !important
+  tbody
+    &.show-for-landscape, &.hide-for-portrait
+      display: table-row-group !important
+  tr
+    &.show-for-landscape, &.hide-for-portrait
+      display: table-row !important
+  td
+    &.show-for-landscape, &.hide-for-portrait
+      display: table-cell !important
+  th
+    &.show-for-landscape, &.hide-for-portrait
+      display: table-cell !important
+
+@media only screen and (orientation: portrait)
+  .show-for-portrait, .hide-for-landscape
+    display: inherit !important
+  .hide-for-portrait, .show-for-landscape
+    display: none !important
+  /* Specific visibility for tables
+  table
+    &.show-for-portrait, &.hide-for-landscape
+      display: table !important
+  thead
+    &.show-for-portrait, &.hide-for-landscape
+      display: table-header-group !important
+  tbody
+    &.show-for-portrait, &.hide-for-landscape
+      display: table-row-group !important
+  tr
+    &.show-for-portrait, &.hide-for-landscape
+      display: table-row !important
+  td
+    &.show-for-portrait, &.hide-for-landscape
+      display: table-cell !important
+  th
+    &.show-for-portrait, &.hide-for-landscape
+      display: table-cell !important
+
+/* Touch-enabled device targeting
+
+.show-for-touch
+  display: none !important
+
+.hide-for-touch
+  display: inherit !important
+
+.touch
+  .show-for-touch
+    display: inherit !important
+  .hide-for-touch
+    display: none !important
+
+/* Specific visibility for tables
+
+table.hide-for-touch, .touch table.show-for-touch
+  display: table !important
+
+thead.hide-for-touch, .touch thead.show-for-touch
+  display: table-header-group !important
+
+tbody.hide-for-touch, .touch tbody.show-for-touch
+  display: table-row-group !important
+
+tr.hide-for-touch, .touch tr.show-for-touch
+  display: table-row !important
+
+td.hide-for-touch, .touch td.show-for-touch, th.hide-for-touch, .touch th.show-for-touch
+  display: table-cell !important
+
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+
+.print-only
+  display: none !important
+
+@media print
+  *
+    background: transparent !important
+    color: #000000 !important
+    /* Black prints faster: h5bp.com/s
+    box-shadow: none !important
+    text-shadow: none !important
+  .show-for-print
+    display: block
+  .hide-for-print
+    display: none
+  table.show-for-print
+    display: table !important
+  thead.show-for-print
+    display: table-header-group !important
+  tbody.show-for-print
+    display: table-row-group !important
+  tr.show-for-print
+    display: table-row !important
+  td.show-for-print, th.show-for-print
+    display: table-cell !important
+  a
+    text-decoration: underline
+    &:visited
+      text-decoration: underline
+    &[href]:after
+      content: " (" attr(href) ")"
+  abbr[title]:after
+    content: " (" attr(title) ")"
+  .ir a:after
+    content: ""
+  a
+    &[href^="javascript:"]:after, &[href^="#"]:after
+      content: ""
+  pre, blockquote
+    border: 1px solid #999999
+    page-break-inside: avoid
+  thead
+    display: table-header-group
+    /* h5bp.com/t
+  tr
+    page-break-inside: avoid
+  img
+    page-break-inside: avoid
+    max-width: 100% !important
+  @page
+    margin: 0.5cm
+
+  p, h2, h3
+    orphans: 3
+    widows: 3
+  h2, h3
+    page-break-after: avoid
+  .hide-on-print
+    display: none !important
+  .print-only
+    display: block !important
+  .hide-for-print
+    display: none !important
+  .show-for-print
+    display: inherit !important
+
+/* Print visibility
+@media print
+  .show-for-print
+    display: block
+  .hide-for-print
+    display: none
+  table.show-for-print
+    display: table !important
+  thead.show-for-print
+    display: table-header-group !important
+  tbody.show-for-print
+    display: table-row-group !important
+  tr.show-for-print
+    display: table-row !important
+  td.show-for-print, th.show-for-print
+    display: table-cell !important
