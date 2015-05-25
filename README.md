@@ -19,7 +19,7 @@ First of all, you (and your designer) needs to decide the **line (or row) height
 	/* Set your max number of rows here */
 	$bl-max-rows: {YOUR_MAX_NUMBER_OF_ROWS_HERE}
 
-For example, if you set `$bl = 10` and `$bl-max-rows = 80`, the baseline will create 80 classes (`.bl-2`, `.bl-3`... `.bl-80`) and **padding+margin** classes (`.bl-margin-t-2`, `.bl-padding-b-3` and `.bl-fluid-4`).
+For example, if you set `$bl = 10` and `$bl-max-rows = 80`, the baseline will create 80 classes (`.bl-2`, `.bl-3`... `.bl-80`), **padding + margin** classes (`.bl-margin-t-2`, `.bl-padding-b-3` and `.bl-fluid-4`) and the top height size will be 800px.
 
 ### Examples
 Visit: <http://kanui.github.io/baseline> for examples.
