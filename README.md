@@ -28,9 +28,7 @@ Visit: <http://kanui.github.io/baseline> for examples.
 See our issues list or fork this repo and pull us a improvement.
 
 ## Contact
-The Baseline was created at **Kanui** lab but the main sponsors of the project are [@maclovin](http://github.com/maclovin) and [@filipekiss](http://github.com/filipekiss).
-
-If you really want to talk with us, pls, mail to [m4k2005@yahoo.com](mailto:m4k2005@yahoo.com).
+The Baseline was created at [**Kanui**](http://github.com/kanui/queroserkanui) lab but the main sponsors of the project are [@maclovin](http://github.com/maclovin) and [@filipekiss](http://github.com/filipekiss).
 ### Version
 
 1.0.2
