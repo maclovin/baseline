@@ -31,7 +31,7 @@ See our issues list or fork this repo and pull us a improvement.
 The Baseline was created at [**Kanui**](http://github.com/kanui/queroserkanui) lab but the main sponsors of the project are [@maclovin](http://github.com/maclovin) and [@filipekiss](http://github.com/filipekiss).
 ### Version
 
-1.0.2
+0.1.0
 
 ### License
 MIT
