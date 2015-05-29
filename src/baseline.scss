@@ -24,6 +24,19 @@ body {
   box-sizing: content-box;
 }
 
+.bl-collapse-t {
+  margin-top: 0;
+}
+
+.bl-collapse-b {
+  margin-bottom: 0;
+}
+
+.bl-collapse-v {
+  @extend .bl-collapse-b;
+  @extend .bl-collapse-t;
+}
+
 @mixin bl-typo($bl-ty-val) {
   margin: 0;
   padding: 0;
