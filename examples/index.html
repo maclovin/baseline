@@ -1,0 +1,246 @@
+<html>
+  <head>
+    <title>Baseline | Examples</title>
+    <meta charset="utf-8"/>
+    <meta name=”description” content="Create your vertical rythm with pattern sizes and without magic numbers"/>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/main.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <!-- <div class="top-bar"></div> -->
+    <header class="row">
+      <section class="large-8 large-centered columns bl-8 bl-margin-t-3">
+        <nav class="nav-main">
+          <ul class="nav-main-list bl-8">
+            <a href="/" class="nav-main-logo">
+              <img src="/images/logo-inverse.png" alt="" />
+            </a>
+            <li class="nav-main-item bl-1-auto">
+              <a href="">Download</a>
+            </li>
+            <li class="nav-main-item bl-1-auto">
+              <a href="/">Get Involved</a>
+            </li>
+            <li class="nav-main-item bl-1-auto nav-main-item-selected">
+              <a href="/examples">Examples</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <section class="row">
+      <div class="large-8 large-centered columns top-border bl-margin-t-3">
+        <div class="row">
+        <div class="text-center bl-margin-t-3">
+          <h3>Examples</h3>
+        </div>
+
+        <div class="large-5 columns bl-40 bl-margin-t-3 text-left" >
+          <h5 class="text-upper">Typography mixin:</h5>
+          <pre class="bl-10 bl-margin-t-1 bl-padding-t-1 bl-padding-b-1">/* baseline.sass */
+
+/* Set your baseline here */
+$bl: 10px</pre>
+          <pre class="bl-margin-t-1 bl-20 bl-padding-t-1 bl-padding-b-1">/* your code */
+h1
+  +bl-typo(4)
+p
+  +bl-typo(2)
+  font-style: italic</pre>
+
+        </div>
+        <div class="large-5 columns bl-40 bl-margin-t-3 text-left" >
+          <h5 class="text-upper">Output:</h5>
+          <pre class="bl-33 bl-margin-t-1 bl-padding-t-1 bl-padding-b-1">h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-style: italic;
+}</pre>
+        </div>
+        <div class="large-5 columns bl-19 bl-margin-t-3 text-left" >
+          <h5 class="text-upper">Element height:</h5>
+
+          <pre class="bl-margin-t-1 bl-padding-t-1 bl-padding-b-1 bl-12">&lt;div class="bl-2"&gt;We&lt;/div&gt;
+&lt;div class="bl-2""&gt;are&lt;/div&gt;
+&lt;div class="bl-2">20px&lt;/div&gt;
+
+&lt;div class="bl-6">I am 60px&lt;/div&gt;</pre>
+        </div>
+        <div class="large-5 columns bl-margin-t-3 bl-19" >
+          <h5 class="text-upper bl-margin-b-1">Output:</h5>
+          <div class="bl-2 content">We</div>
+          <div class="bl-2 content-secondary">are</div>
+          <div class="bl-2 content">20px</div>
+          <div class="bl-6 content-secondary">I am 60px</div>
+        </div>
+
+        <div class="large-5 columns bl-36 bl-margin-t-3 text-left" >
+          <h5 class="text-upper">Element margin:</h5>
+
+          <pre class="bl-26 bl-margin-t-1 bl-padding-t-1 bl-padding-b-1">
+&lt;div class="bl-2"&gt;I am 20px&lt;/div&gt;
+
+&lt;div class="bl-2 bl-margin-t-2"&gt;
+  Applying margin-top with 20px
+&lt;/div&gt;
+
+&lt;div class="bl-2 bl-margin-b-4">
+  Applying margin-bottom with 40px
+&lt;/div&gt;
+
+&lt;div class="bl-4">I am 40px&lt;/div&gt;</pre>
+        </div>
+        <div class="large-5 columns bl-36 bl-margin-t-3 text-left">
+          <h5 class="text-upper bl-margin-b-1">Output:</h5>
+
+          <div class="bl-2 content">I am 20px</div>
+          <div class="bl-2 bl-margin-t-2 content-secondary">Applying margin-top with 20px</div>
+          <div class="bl-2 bl-margin-b-4 content">Applying margin-bottom with 40px</div>
+          <div class="bl-4 content-secondary">I am 40px</div>
+        </div>
+
+        <div class="large-5 columns bl-margin-t-3 bl-32 text-left">
+          <h5 class="text-upper">Element padding:</h5>
+          <pre class="bl-margin-23 bl-margin-t-1 bl-padding-t-1 bl-padding-b-1">
+&lt;div class="bl-2"&gt;
+  I am 20px
+&lt;/div&gt;
+
+&lt;div class="bl-2 bl-padding-b-2"&gt;
+  Applying padding-bottom with 20px
+&lt;/div&gt;
+
+&lt;div class="bl-2 bl-margin-b-4">
+  Applying margin-top with 40px
+&lt;/div&gt;</pre>
+        </div>
+
+        <div class="large-5 columns bl-margin-t-3 bl-33 text-left">
+          <h5 class="text-upper bl-margin-b-1">Output:</h5>
+          <div class="bl-2 content">I am 20px</div>
+          <div class="bl-2 bl-padding-b-2 content-secondary">Applying padding-bottom with 20px</div>
+          <div class="bl-2 bl-margin-t-4 content">Applying margin-top with 40px</div>
+        </div>
+
+        <div class="large-5 columns bl-23 bl-margin-t-3 text-left">
+          <h5 class="text-upper">Fluid element height:</h5>
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="bl-margin-t-1 bl-12 bl-padding-t-1 bl-padding-b-1">
+&lt;div class="bl-2-auto"&gt;
+  I am 20px with fluid height&lt;br&gt;
+  I am 20px with fluid height&lt;br&gt;
+  I am 20px with fluid height&lt;br&gt;
+&lt;/div&gt;</pre>
+        </div>
+
+        <div class="large-5 columns bl-23 bl-margin-t-3 text-left">
+          <h5 class="text-upper bl-margin-b-1">Output:</h5>
+          <div class="bl-2-auto content">
+            I am 20px with fluid height<br>
+            I am 20px with fluid height<br>
+            I am 20px with fluid height<br>
+          </div>
+        </div>
+
+        <div class="large-5 columns bl-23 bl-margin-t-3 text-left">
+          <h5 class="text-upper">Vertical alignment:</h5>
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="bl-margin-t-1 bl-12 bl-padding-t-1 bl-padding-b-1">
+&lt;div class="bl-8"&gt;
+  &lt;h4 class="bl-2 bl-vertical"&gt;
+    Wild thing
+  &lt;/h4&gt;
+&lt;/div&gt;</pre>
+        </div>
+
+        <div class="large-5 columns bl-23 bl-margin-t-3 text-left">
+          <h5 class="text-upper bl-margin-b-1">Output:</h5>
+          <div class="bl-8 content">
+            <h4 class="bl-2 bl-vertical">Wild thing</h4>
+          </div>
+        </div>
+
+        <div class="large-5 columns bl-23 bl-margin-t-3 text-left">
+          <h5 class="text-upper">Reset classes:</h5>
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="bl-margin-t-1 bl-18 bl-padding-t-1 bl-padding-b-1">
+&lt;div class="bl-no-margin-t bl-2"&gt;
+  Removing top margin
+&lt;/div&gt;
+
+&lt;div class="bl-no-margin bl-2"&gt;
+  Removing all margins
+&lt;/div&gt;
+
+&lt;div class="bl-no-margin-b bl-2"&gt;
+  Removing bottom margin
+&lt;/div&gt;</pre>
+        </div>
+
+        <div class="large-5 columns bl-23 bl-margin-t-3 text-left">
+          <h5 class="text-upper bl-margin-b-1">Output:</h5>
+          <div class="bl-no-margin-t bl-2 content">
+              Removing top margin
+          </div>
+          <div class="bl-no-margin bl-2 content-secondary">
+              Removing all margins
+          </div>
+          <div class="bl-no-margin-b bl-2 content">
+              Removing bottom margin
+          </div>
+        </div>
+
+        <div class="large-5 columns bl-23 bl-margin-t-3 text-left">
+          <h5 class="text-upper">Responsive classes:</h5>
+          <!--?prettify lang=html linenums=true?-->
+          <pre class="bl-margin-t-1 bl-12 bl-padding-t-1 bl-padding-b-1">
+&lt;div class="bl-2 bl-medium-4 bl-large-6 bl-xlarge-8 bl-xxlarge-10"&gt;
+  I am 20px on small screen,
+  40px on medium screen,
+  60px on large screen,
+  80px on xlarge screen and
+  100px on xxlarge screen.
+&lt;/div&gt;</pre>
+        </div>
+
+        <div class="large-5 columns bl-23 bl-margin-t-3 text-left">
+          <h5 class="text-upper bl-margin-b-1">Output:</h5>
+          <div class="bl-2 bl-medium-4 bl-large-6 bl-xlarge-8 bl-xxlarge-10 content">
+  I am 20px on small screen,<br>
+  40px on medium screen,<br>
+  60px on large screen,<br>
+  80px on xlarge screen and<br>
+  100px on xxlarge screen.<br>
+</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="large-10 columns text-center bl-18 bl-margin-t-3">
+      <h3>The next step:</h3>
+      <div class="bl-8 bl-padding-t-5">
+        <a href="https://github.com/Kanui/baseline/archive/master.zip" class="button">Download</a>
+        <span class="spaced-item"> or </span>
+        <a href="https://github.com/Kanui/baseline" target="_blank" class="button">Fork</a>
+
+      </div>
+    </div>
+    </section>
+
+    <footer class="bl-2 bl-margin-t-3 bl-padding-t-1 bl-padding-b-1">
+      <div class="bl-2 large-10 columns text-center">
+        <span class="text-footer">Powered by <strong><a href="https://github.com/Kanui/QueroSerKanui">Kanui</a></strong> developers | 2015</span>
+      </div>
+    </footer>
+  </body>
+</html>

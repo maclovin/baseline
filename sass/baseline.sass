@@ -35,14 +35,23 @@ body
   -ms-transform: translateY(-50%)
   transform: translateY(-50%)
 
+.bl-no-margin-t
+  margin-top: 0 !important
+
+.bl-no-margin-b
+  margin-bottom: 0 !important
+
+.bl-no-margin
+  @extend .bl-no-margin-t
+  @extend .bl-no-margin-b
+
 @for $i from 1 through $bl-max-rows
   $bl-val: $bl * $i
-
   .bl-#{$i}
     height: $bl-val
-    overflow: hidden
+    overflow-y: hidden
 
-    &-fluid
+    &-auto
       height: auto !important
       min-height: $bl-val
 
@@ -57,3 +66,99 @@ body
 
   .bl-padding-b-#{$i}
     padding-bottom: $bl-val
+
+/* medium displays
+@media only screen and (min-width: 40.0625em)
+  @for $i from 1 through $bl-max-rows
+    $bl-val: $bl * $i
+    .bl-medium-#{$i}
+      height: $bl-val
+      overflow-y: hidden
+
+      &-auto
+        height: auto !important
+        min-height: $bl-val
+
+    .bl-medium-margin-t-#{$i}
+      margin-top: $bl-val
+
+    .bl-medium-margin-b-#{$i}
+      margin-bottom: $bl-val
+
+    .bl-medium-padding-t-#{$i}
+      padding-top: $bl-val
+
+    .bl-medium-padding-b-#{$i}
+      padding-bottom: $bl-val
+
+/* large displays
+@media only screen and (min-width: 64.0625em)
+  @for $i from 1 through $bl-max-rows
+    $bl-val: $bl * $i
+    .bl-large-#{$i}
+      height: $bl-val
+      overflow-y: hidden
+
+      &-auto
+        height: auto !important
+        min-height: $bl-val
+
+    .bl-large-margin-t-#{$i}
+      margin-top: $bl-val
+
+    .bl-large-margin-b-#{$i}
+      margin-bottom: $bl-val
+
+    .bl-large-padding-t-#{$i}
+      padding-top: $bl-val
+
+    .bl-large-padding-b-#{$i}
+      padding-bottom: $bl-val
+
+/* xlarge displays
+@media only screen and (min-width: 90.0625em)
+  @for $i from 1 through $bl-max-rows
+    $bl-val: $bl * $i
+    .bl-xlarge-#{$i}
+      height: $bl-val
+      overflow-y: hidden
+
+      &-auto
+        height: auto !important
+        min-height: $bl-val
+
+    .bl-xlarge-margin-t-#{$i}
+      margin-top: $bl-val
+
+    .bl-xlarge-margin-b-#{$i}
+      margin-bottom: $bl-val
+
+    .bl-xlarge-padding-t-#{$i}
+      padding-top: $bl-val
+
+    .bl-xlarge-padding-b-#{$i}
+      padding-bottom: $bl-val
+
+/* xxlarge displays
+@media only screen and (min-width: 120.0625em)
+  @for $i from 1 through $bl-max-rows
+    $bl-val: $bl * $i
+    .bl-xxlarge-#{$i}
+      height: $bl-val
+      overflow-y: hidden
+
+      &-auto
+        height: auto !important
+        min-height: $bl-val
+
+    .bl-xxlarge-margin-t-#{$i}
+      margin-top: $bl-val
+
+    .bl-xxlarge-margin-b-#{$i}
+      margin-bottom: $bl-val
+
+    .bl-xxlarge-padding-t-#{$i}
+      padding-top: $bl-val
+
+    .bl-xxlarge-padding-b-#{$i}
+      padding-bottom: $bl-val

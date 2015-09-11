@@ -2,23 +2,26 @@
 @import 'baseline'
 
 $color-primary: #436c7c
-$color-background: #3B5AA2
+$color-background: #282C34
 
 body
-  font-family: 'Helvetica Neue', Helvetica, Verdana
+  font-family: Ubuntu, 'Helvetica Neue', Helvetica, Verdana
   font-weight: lighter
   font-size: 12px
   color: #eee
   background-color: $color-background
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3)  1px, $color-background 1px)
+  // background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3)  1px, $color-background 1px)
   background-size: 5px $bl
 
 a
   color: #fff
   text-decoration: none
 
+  &:hover
+    text-decoration: underline
+
 h1, h2, h3, h4, h5, p
-  font-family: 'Helvetica Neue', Helvetica, Verdana
+  font-family: Ubuntu, 'Helvetica Neue', Helvetica, Verdana
   font-weight: lighter
   color: #eee
   margin: 0
@@ -37,7 +40,7 @@ h4
   +bl-typo(2)
 
 pre
-  font-size: 20px
+  font-size: 14px
   background: #333
   color: #eee
   padding-left: 20px
@@ -53,6 +56,7 @@ footer
     color: $color-background
     text-decoration: underline
 
+
 .text-upper
   text-transform: uppercase
   letter-spacing: 2px
@@ -63,13 +67,64 @@ footer
 .content
   background: rgba(238, 238, 238, 0.4)
 
+  &-secondary
+    background: rgba(221, 221, 221, 0.3)
+
+.content,
 .content-secondary
-  background: rgba(221, 221, 221, 0.3)
+  padding-left: 20px
+  padding-right: 20px
 
 .button
-  background: #eee
-  color: $color-background
-  padding: 20px
-  font-size: 40px
-  line-height: 40px
+  background: $color-background
+  border: solid thin #ffffff
+  color: #ffffff
+  padding: 10px
+  font-size: 20px
+  line-height: 20px
   text-decoration: none
+
+  &:hover
+    background: #ffffff
+    color: $color-background
+    text-decoration: none
+
+.section-background
+  background: url(/images/bg-pic.png) no-repeat $color-background
+  background-position: center center
+  box-shadow: inset 0 0 150px #000000
+  -moz-box-shadow: inset 0 0 150px #000000
+  -webkit-box-shadow: inset 0 0 150px #000000
+
+.nav-main
+  &-list
+    margin: 0
+    padding: 0
+
+  &-logo img
+    height: 80px
+    float: left
+
+  &-item
+    display: inline-block
+    margin: 0 0 0 30px
+    float: right
+    font-size: 14px
+    @extend .bl-vertical
+
+    &-selected
+      background: #ffffff
+      padding: 5px
+
+      a
+        color: $color-background
+
+.top-border
+  border-top: solid thin #ffffff
+
+.spaced-item
+  margin: 0 10px
+
+p
+  font-size: 14px
+  line-height: 20px
