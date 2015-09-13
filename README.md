@@ -4,7 +4,7 @@ Baseline is a vertical rythm system (ou vertical grid system) based on pixel-per
 
 The baseline rethink the common baseline property. With this lib the "baseline" is a specific vertical area and your content can't pass this limit.
 
-### Installation 
+### Installation
 Download the baseline for your favorite format (SASS or SCSS) and put in your css directory.
 
 ### Configuration
@@ -31,7 +31,7 @@ See our issues list or fork this repo and pull us a improvement.
 The Baseline was created at [**Kanui**](http://github.com/kanui/queroserkanui) lab but the main sponsors of the project are [@maclovin](http://github.com/maclovin) and [@filipekiss](http://github.com/filipekiss).
 ### Version
 
-0.1.0
+0.4.2
 
 ### License
 MIT
