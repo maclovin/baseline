@@ -14174,8 +14174,8 @@ h1, h2, h3, h4, h5, p {
 h1 {
   margin: 0;
   padding: 0;
-  font-size: 100px;
-  line-height: 100px;
+  font-size: 90px;
+  line-height: 90px;
 }
 
 /* line 37, sass/main.sass */
