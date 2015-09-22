@@ -1,0 +1,77 @@
+/* Set your baseline here */
+$bl: 10px;
+
+/* Set your max number of rows here */
+$bl-max-rows: 80;
+
+/* $bl x $bl-max-rows = 800px <- your max height
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+[class*=bl-padding][class*=bl-] {
+  box-sizing: content-box;
+}
+
+.bl-collapse-t {
+  margin-top: 0;
+}
+
+.bl-collapse-b {
+  margin-bottom: 0;
+}
+
+.bl-collapse-v {
+  @extend .bl-collapse-b;
+  @extend .bl-collapse-t;
+}
+
+@mixin bl-typo($bl-ty-val) {
+  margin: 0;
+  padding: 0;
+  font-size: $bl-ty-val * $bl;
+  line-height: $bl-ty-val * $bl;
+}
+
+.bl-vertical {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@for $i from 1 through $bl-max-rows {
+  $bl-val: $bl * $i;
+  .bl-#{$i} {
+    height: $bl-val;
+    overflow: hidden;
+    &-fluid {
+      height: auto !important;
+      min-height: $bl-val;
+    }
+  }
+  .bl-margin-t-#{$i} {
+    margin-top: $bl-val;
+  }
+  .bl-margin-b-#{$i} {
+    margin-bottom: $bl-val;
+  }
+  .bl-padding-t-#{$i} {
+    padding-top: $bl-val;
+  }
+  .bl-padding-b-#{$i} {
+    padding-bottom: $bl-val;
+  }
+}
