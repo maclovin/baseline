@@ -14167,8 +14167,9 @@ h1, h2, h3, h4, h5 {
 h1 {
   margin: 0;
   padding: 0;
-  font-size: 90px;
-  line-height: 90px;
+  font-size: 100px;
+  line-height: 100px;
+  font-weight: lighter;
 }
 
 /* line 33, sass/main.sass */
@@ -14224,6 +14225,11 @@ footer a {
 }
 
 /* line 64, sass/main.sass */
+.text-light {
+  font-weight: lighter;
+}
+
+/* line 67, sass/main.sass */
 .text-footer {
   margin: 0;
   padding: 0;
@@ -14231,23 +14237,23 @@ footer a {
   line-height: 20px;
 }
 
-/* line 67, sass/main.sass */
+/* line 70, sass/main.sass */
 .content {
   background: rgba(238, 238, 238, 0.4);
 }
-/* line 70, sass/main.sass */
+/* line 73, sass/main.sass */
 .content-secondary {
   background: rgba(221, 221, 221, 0.3);
 }
 
-/* line 73, sass/main.sass */
+/* line 76, sass/main.sass */
 .content,
 .content-secondary {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* line 78, sass/main.sass */
+/* line 81, sass/main.sass */
 .button {
   background: #282C34;
   border: solid thin #ffffff;
@@ -14257,14 +14263,14 @@ footer a {
   line-height: 20px;
   text-decoration: none;
 }
-/* line 87, sass/main.sass */
+/* line 90, sass/main.sass */
 .button:hover {
   background: #ffffff;
   color: #282C34;
   text-decoration: none;
 }
 
-/* line 92, sass/main.sass */
+/* line 95, sass/main.sass */
 .section-background {
   background: url(/baseline/images/bg-pic.png) no-repeat #282C34;
   background-attachment: fixed;
@@ -14274,49 +14280,49 @@ footer a {
   -webkit-box-shadow: inset 0 0 150px #000000;
 }
 
-/* line 101, sass/main.sass */
+/* line 104, sass/main.sass */
 .nav-main-list {
   margin: 0;
   padding: 0;
 }
-/* line 105, sass/main.sass */
+/* line 108, sass/main.sass */
 .nav-main-logo img {
   height: 80px;
   float: left;
 }
-/* line 109, sass/main.sass */
+/* line 112, sass/main.sass */
 .nav-main-item {
   display: inline-block;
   margin: 0 0 0 30px;
   float: right;
   font-size: 14px;
 }
-/* line 116, sass/main.sass */
+/* line 119, sass/main.sass */
 .nav-main-item-selected {
   background: #ffffff;
   padding: 5px;
 }
-/* line 120, sass/main.sass */
+/* line 123, sass/main.sass */
 .nav-main-item-selected a {
   color: #282C34;
 }
 
-/* line 123, sass/main.sass */
+/* line 126, sass/main.sass */
 .top-border {
   border-top: solid thin #ffffff;
 }
 
-/* line 126, sass/main.sass */
+/* line 129, sass/main.sass */
 .spaced-item {
   margin: 0 10px;
 }
 
-/* line 129, sass/main.sass */
+/* line 132, sass/main.sass */
 p {
   font-size: 15px;
   line-height: 20px;
 }
-/* line 133, sass/main.sass */
+/* line 136, sass/main.sass */
 p a {
   text-decoration: underline;
 }
