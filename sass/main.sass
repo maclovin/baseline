@@ -101,7 +101,7 @@ footer
   -webkit-box-shadow: inset 0 0 150px #000000
 
 .nav-main
-  &-list
+  &-list, &-list-mobile
     margin: 0
     padding: 0
 
@@ -116,15 +116,23 @@ footer
     font-size: 14px
     @extend .bl-vertical
 
+  &-item-mobile
+    @extend .nav-main-item
+    float: none
+    font-size: 13px
+
     &-selected
       background: #ffffff
       padding: 5px
 
       a
         color: $color-background
+.border
+  &-top
+    border-top: solid thin #ffffff
 
-.top-border
-  border-top: solid thin #ffffff
+  &-bottom
+    border-bottom: solid thin #ffffff
 
 .spaced-item
   margin: 0 10px

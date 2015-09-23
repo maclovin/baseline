@@ -1709,7 +1709,7 @@ body {
 }
 
 /* line 31, sass/baseline.sass */
-.bl-vertical, .nav-main-item {
+.bl-vertical, .nav-main-item, .nav-main-item-mobile {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -14281,7 +14281,7 @@ footer a {
 }
 
 /* line 104, sass/main.sass */
-.nav-main-list {
+.nav-main-list, .nav-main-list-mobile {
   margin: 0;
   padding: 0;
 }
@@ -14291,38 +14291,47 @@ footer a {
   float: left;
 }
 /* line 112, sass/main.sass */
-.nav-main-item {
+.nav-main-item, .nav-main-item-mobile {
   display: inline-block;
   margin: 0 0 0 30px;
   float: right;
   font-size: 14px;
 }
 /* line 119, sass/main.sass */
-.nav-main-item-selected {
+.nav-main-item-mobile {
+  float: none;
+  font-size: 13px;
+}
+/* line 124, sass/main.sass */
+.nav-main-item-mobile-selected {
   background: #ffffff;
   padding: 5px;
 }
-/* line 123, sass/main.sass */
-.nav-main-item-selected a {
+/* line 128, sass/main.sass */
+.nav-main-item-mobile-selected a {
   color: #282C34;
 }
 
-/* line 126, sass/main.sass */
-.top-border {
+/* line 131, sass/main.sass */
+.border-top {
   border-top: solid thin #ffffff;
 }
+/* line 134, sass/main.sass */
+.border-bottom {
+  border-bottom: solid thin #ffffff;
+}
 
-/* line 129, sass/main.sass */
+/* line 137, sass/main.sass */
 .spaced-item {
   margin: 0 10px;
 }
 
-/* line 132, sass/main.sass */
+/* line 140, sass/main.sass */
 p {
   font-size: 15px;
   line-height: 20px;
 }
-/* line 136, sass/main.sass */
+/* line 144, sass/main.sass */
 p a {
   text-decoration: underline;
 }
