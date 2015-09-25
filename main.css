@@ -14272,7 +14272,7 @@ footer a {
 
 /* line 95, sass/main.sass */
 .section-background {
-  background: url(/baseline/images/bg-pic.png) no-repeat #282C34;
+  background: url(/baseline/images/bg-pic.jpg) no-repeat #282C34;
   background-attachment: fixed;
   background-position: center center;
   box-shadow: inset 0 0 150px #000000;
