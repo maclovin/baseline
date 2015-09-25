@@ -14225,17 +14225,22 @@ footer a {
 }
 
 /* line 63, sass/main.sass */
+.text-center {
+  text-align: center;
+}
+
+/* line 66, sass/main.sass */
 .text-upper {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/* line 67, sass/main.sass */
+/* line 70, sass/main.sass */
 .text-light {
   font-weight: lighter;
 }
 
-/* line 70, sass/main.sass */
+/* line 73, sass/main.sass */
 .text-footer {
   margin: 0;
   padding: 0;
@@ -14243,23 +14248,23 @@ footer a {
   line-height: 20px;
 }
 
-/* line 73, sass/main.sass */
+/* line 76, sass/main.sass */
 .content {
   background: rgba(238, 238, 238, 0.4);
 }
-/* line 76, sass/main.sass */
+/* line 79, sass/main.sass */
 .content-secondary {
   background: rgba(221, 221, 221, 0.3);
 }
 
-/* line 79, sass/main.sass */
+/* line 82, sass/main.sass */
 .content,
 .content-secondary {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-/* line 84, sass/main.sass */
+/* line 87, sass/main.sass */
 .button {
   background: #282C34;
   border: solid thin #ffffff;
@@ -14269,14 +14274,14 @@ footer a {
   line-height: 20px;
   text-decoration: none;
 }
-/* line 93, sass/main.sass */
+/* line 96, sass/main.sass */
 .button:hover {
   background: #ffffff;
   color: #282C34;
   text-decoration: none;
 }
 
-/* line 98, sass/main.sass */
+/* line 101, sass/main.sass */
 .section-background {
   background: url(/baseline/images/bg-pic.jpg) no-repeat #282C34;
   background-attachment: fixed;
@@ -14286,58 +14291,58 @@ footer a {
   -webkit-box-shadow: inset 0 0 150px #000000;
 }
 
-/* line 107, sass/main.sass */
+/* line 110, sass/main.sass */
 .nav-main-list, .nav-main-list-mobile {
   margin: 0;
   padding: 0;
 }
-/* line 111, sass/main.sass */
+/* line 114, sass/main.sass */
 .nav-main-logo img {
   height: 80px;
   float: left;
 }
-/* line 115, sass/main.sass */
+/* line 118, sass/main.sass */
 .nav-main-item, .nav-main-item-mobile {
   display: inline-block;
   margin: 0 0 0 30px;
   float: right;
   font-size: 14px;
 }
-/* line 122, sass/main.sass */
+/* line 125, sass/main.sass */
 .nav-main-item-mobile {
   float: none;
   font-size: 13px;
 }
-/* line 127, sass/main.sass */
+/* line 131, sass/main.sass */
 .nav-main-item-mobile-selected {
   background: #ffffff;
   padding: 5px;
 }
-/* line 131, sass/main.sass */
+/* line 135, sass/main.sass */
 .nav-main-item-mobile-selected a {
   color: #282C34;
 }
 
-/* line 134, sass/main.sass */
+/* line 138, sass/main.sass */
 .border-top {
   border-top: solid thin #ffffff;
 }
-/* line 137, sass/main.sass */
+/* line 141, sass/main.sass */
 .border-bottom {
   border-bottom: solid thin #ffffff;
 }
 
-/* line 140, sass/main.sass */
+/* line 144, sass/main.sass */
 .spaced-item {
   margin: 0 10px;
 }
 
-/* line 143, sass/main.sass */
+/* line 147, sass/main.sass */
 p {
   font-size: 15px;
   line-height: 20px;
 }
-/* line 147, sass/main.sass */
+/* line 151, sass/main.sass */
 p a {
   text-decoration: underline;
 }
